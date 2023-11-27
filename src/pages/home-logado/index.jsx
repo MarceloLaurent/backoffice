@@ -1,12 +1,10 @@
-
 import { Container } from "./styles";
-import { Header } from "../../components/Header";
+import { Logado } from "../../components/Logado";
 
-const Home = () => {
-
+const HomeLogado = () => {
   return (
     <>
-      <Header />
+      <Logado />
       <Container>
         <div>
           <h1>Wellcome to Backoffice!</h1>
@@ -16,4 +14,4 @@ const Home = () => {
   );
 };
 
-export { Home };
+export { HomeLogado };

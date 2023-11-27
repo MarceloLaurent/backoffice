@@ -26,8 +26,8 @@ const Header = () => {
         <Row>
           <>
             <MenuRight href="/">Inicio</MenuRight>
-            <Button title="Entrar" onClick={handleClickSignIn}/>
-            <Button title="Cadastrar" onClick={handleClickSignUp}/>
+            <Button title="Entrar" onClick={handleClickSignIn} />
+            <Button title="Cadastrar" onClick={handleClickSignUp} />
           </>
         </Row>
       </Container>

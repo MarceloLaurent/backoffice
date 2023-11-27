@@ -38,7 +38,7 @@ const Login = () => {
           data[i].senha === formData.senha
         ) {
           console.log(data[i]);
-          navigate("/");
+          navigate("/logado");
           return;
         }
       }

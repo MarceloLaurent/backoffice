@@ -20,7 +20,7 @@ import { Input } from "../../components/Input";
 import { InputRadio } from "../../components/InputRadio";
 import { api } from "../../services/api";
 
-import { Container, Wrapper, Title, Row } from "./styles";
+import { Container, Wrapper, Title } from "./styles";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -79,8 +79,9 @@ const SignUp = () => {
         senha: formData.senha,
       });
 
+      alert("Cadastro realizado! Faça o login para continuar");
       console.log(data);
-      navigate("/");
+      navigate("/login");
       return;
     } catch (e) {
       //TODO: HOUVE UM ERRO
@@ -105,50 +106,47 @@ const SignUp = () => {
             <span>{errors.nome?.message}</span>
             <Input
               type="number"
-              placeholder="CPF"
+              placeholder="CPF: apenas números"
               leftIcon={<MdPermIdentity />}
               name="cpf"
               control={control}
             />
             <span>{errors.cpf?.message}</span>
-            <Row>
-              <Input
-                type="text"
-                placeholder="Endereço"
-                leftIcon={<MdAddLocation />}
-                name="endereco"
-                control={control}
-              />
-              <span>{errors.endereco?.message}</span>
-              <Input
-                type="number"
-                placeholder="Número"
-                leftIcon={<MdHome />}
-                name="numero"
-                control={control}
-              />
-              <span>{errors.numero?.message}</span>
-            </Row>
-            <Row>
-              <Input
-                type="text"
-                placeholder="Complemento"
-                leftIcon={<MdAddLocationAlt />}
-                name="complemento"
-                control={control}
-              />
-              <Input
-                type="text"
-                placeholder="CEP"
-                leftIcon={<MdMail />}
-                name="cep"
-                control={control}
-              />
-              <span>{errors.cep?.message}</span>
-            </Row>
             <Input
               type="text"
-              placeholder="Celular"
+              placeholder="Endereço"
+              leftIcon={<MdAddLocation />}
+              name="endereco"
+              control={control}
+            />
+            <span>{errors.endereco?.message}</span>
+            <Input
+              type="number"
+              placeholder="Número"
+              leftIcon={<MdHome />}
+              name="numero"
+              control={control}
+            />
+            <span>{errors.numero?.message}</span>
+            <Input
+              type="text"
+              placeholder="Complemento"
+              leftIcon={<MdAddLocationAlt />}
+              name="complemento"
+              control={control}
+            />
+            <Input
+              type="text"
+              placeholder="CEP: xxxxx-xxx"
+              leftIcon={<MdMail />}
+              name="cep"
+              control={control}
+            />
+            <span>{errors.cep?.message}</span>
+
+            <Input
+              type="text"
+              placeholder="Contato: (xx) xxxxx-xxxx"
               leftIcon={<MdPhoneAndroid />}
               name="celular"
               control={control}
